@@ -81,8 +81,11 @@ export function CountdownSection({ weddingDate }: CountdownSectionProps) {
       className="relative border-y border-white/10 bg-[#0b0f14] px-6 py-24 text-white"
     >
       <div className="mx-auto max-w-6xl">
+        <p className="text-center text-xs uppercase tracking-[0.35em] text-white/60">
+          Contagem regressiva
+        </p>
+
         <SectionHeading
-          overline="Contagem regressiva"
           title="Faltam poucos capítulos para esse grande dia"
           description="Cada dia que passa nos aproxima de um momento inesquecível. Estamos contando os instantes para celebrar esse novo começo."
           align="center"
