@@ -14,14 +14,23 @@ const AUTO_ADVANCE_DELAY = 4200
 export function HeroPhotoCarousel({ images }: HeroPhotoCarouselProps) {
   const [currentIndex, setCurrentIndex] = useState(0)
   const [isPaused, setIsPaused] = useState(false)
+  const carouselRef = useRef<HTMLDivElement | null>(null)
   const slideRefs = useRef<Array<HTMLDivElement | null>>([])
 
   useEffect(() => {
+    const carousel = carouselRef.current
     const selectedSlide = slideRefs.current[currentIndex]
-    selectedSlide?.scrollIntoView({
-      behavior: 'smooth',
-      block: 'nearest',
-      inline: 'center'
+
+    if (!carousel || !selectedSlide) {
+      return
+    }
+
+    const centeredLeft =
+      selectedSlide.offsetLeft - (carousel.clientWidth - selectedSlide.clientWidth) / 2
+
+    carousel.scrollTo({
+      left: Math.max(centeredLeft, 0),
+      behavior: 'smooth'
     })
   }, [currentIndex])
 
@@ -52,6 +61,7 @@ export function HeroPhotoCarousel({ images }: HeroPhotoCarouselProps) {
   return (
     <div className="relative -mx-6 overflow-hidden border-y border-[var(--color-border)] bg-white/70 shadow-[0_22px_80px_rgba(91,112,87,0.14)] lg:mx-0 lg:rounded-[2rem] lg:border">
       <div
+        ref={carouselRef}
         className="flex snap-x snap-mandatory gap-4 overflow-x-auto scroll-smooth px-6 py-4 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
         aria-label="Carrossel de fotos do casal"
       >

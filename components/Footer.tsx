@@ -30,13 +30,13 @@ export function Footer({ coupleNames }: FooterProps) {
           </p>
 
           <div className="mt-5 flex flex-col gap-5 sm:flex-row sm:items-center">
-            <div className="relative h-24 w-24 shrink-0 overflow-hidden rounded-2xl border border-[var(--color-border)] bg-white">
+            <div className="relative h-36 w-28 shrink-0 overflow-hidden rounded-2xl border border-[var(--color-border)] bg-white">
               <Image
                 src="/parceiros/agape-logo.jpg"
                 alt="Logo Ágape Cerimonial"
                 fill
-                sizes="96px"
-                className="object-cover"
+                sizes="112px"
+                className="object-contain"
               />
             </div>
 
