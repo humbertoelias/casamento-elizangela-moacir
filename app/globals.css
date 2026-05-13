@@ -70,20 +70,6 @@ button {
   outline-offset: 3px;
 }
 
-@keyframes hero-photo-marquee {
-  from {
-    transform: translateX(0);
-  }
-
-  to {
-    transform: translateX(-50%);
-  }
-}
-
-.animate-hero-photo-marquee {
-  animation: hero-photo-marquee 48s linear infinite;
-}
-
 @media (prefers-reduced-motion: reduce) {
   *,
   *::before,
