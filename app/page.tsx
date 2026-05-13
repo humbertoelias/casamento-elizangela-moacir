@@ -6,7 +6,9 @@ import { Header } from '@/components/Header'
 import { HeroSection } from '@/components/HeroSection'
 import { MusicSection } from '@/components/MusicSection'
 import { PixSection } from '@/components/PixSection'
+import { RsvpSection } from '@/components/RsvpSection'
 import { StorySection } from '@/components/StorySection'
+import { VenueSection } from '@/components/VenueSection'
 import { weddingData } from '@/src/data/wedding'
 
 export default function Home() {
@@ -18,9 +20,17 @@ export default function Home() {
         tagline={weddingData.tagline}
         weddingDateLabel={weddingData.weddingDateLabel}
         weddingLocation={weddingData.weddingLocation}
-        heroImage={weddingData.heroImage}
+        galleryImages={weddingData.gallery}
+        songName={weddingData.soundtrack.songName}
+        artist={weddingData.soundtrack.artist}
+        youtubeUrl={weddingData.soundtrack.youtubeUrl}
       />
       <CountdownSection weddingDate={weddingData.weddingDate} />
+      <RsvpSection />
+      <VenueSection
+        venueName={weddingData.weddingLocation}
+        venueUrl={weddingData.weddingLocationUrl}
+      />
       <StorySection
         intro={weddingData.storyIntro}
         body={weddingData.storyBody}

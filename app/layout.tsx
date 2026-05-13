@@ -19,7 +19,7 @@ const bodyFont = Inter({
 
 export const metadata: Metadata = {
   title: `${weddingData.coupleNames} | Casamento`,
-  description: `Site de casamento de ${weddingData.coupleNames} com visual luxuoso e cinematográfico.`
+  description: `Site de casamento de ${weddingData.coupleNames} com visual leve, romântico e cinematográfico.`
 }
 
 export default function RootLayout({

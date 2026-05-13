@@ -1,16 +1,20 @@
 @import "tailwindcss";
 
 :root {
-  --color-bg: #071018;
-  --color-bg-soft: #0d1822;
-  --color-panel: #0b141d;
-  --color-panel-2: #0a121a;
-  --color-text: #d7e0e4;
-  --color-text-strong: #f6f8f9;
-  --color-accent: #7ba0a8;
-  --color-olive-soft: #8d9b6b;
+  --color-bg: #f4faf9;
+  --color-bg-soft: #e7f1f2;
+  --color-panel: #eef6f1;
+  --color-panel-2: #f8fbf6;
+  --color-text: #41515a;
+  --color-text-muted: #78878b;
+  --color-text-strong: #1f3235;
+  --color-accent: #a9c8cf;
+  --color-serenity: #d8eaee;
+  --color-olive: #5f6f4f;
+  --color-olive-soft: #758561;
+  --color-border: rgba(95, 111, 79, 0.16);
+  --color-border-strong: rgba(95, 111, 79, 0.28);
 }
-
 
 * {
   box-sizing: border-box;
@@ -25,13 +29,15 @@ body {
 body {
   font-family: var(--font-body), sans-serif;
   background:
-    radial-gradient(circle at top, rgba(123, 160, 168, 0.12), transparent 28%),
-    linear-gradient(180deg, #071018 0%, #09131b 100%);
+    radial-gradient(circle at 18% 4%, rgba(169, 200, 207, 0.52), transparent 30%),
+    radial-gradient(circle at 82% 14%, rgba(117, 133, 97, 0.2), transparent 26%),
+    linear-gradient(180deg, #f7fbfb 0%, #edf6f2 48%, #f8fbf6 100%);
+  color: var(--color-text);
 }
 
 ::selection {
-  background: rgba(123, 160, 168, 0.35);
-  color: #ffffff;
+  background: rgba(117, 133, 97, 0.25);
+  color: var(--color-text-strong);
 }
 
 a {
@@ -48,7 +54,6 @@ img {
   font-family: var(--font-display), serif;
 }
 
-
 button,
 input,
 textarea,
@@ -61,8 +66,22 @@ button {
 }
 
 :focus-visible {
-  outline: 2px solid rgba(123, 160, 168, 0.9);
+  outline: 2px solid rgba(95, 111, 79, 0.75);
   outline-offset: 3px;
+}
+
+@keyframes hero-photo-marquee {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-hero-photo-marquee {
+  animation: hero-photo-marquee 48s linear infinite;
 }
 
 @media (prefers-reduced-motion: reduce) {

@@ -8,11 +8,11 @@ type HeaderProps = {
 
 const links = [
   { href: '#inicio', label: 'Início' },
+  { href: '#confirmacao', label: 'Confirmação' },
+  { href: '#local', label: 'Local' },
   { href: '#historia', label: 'Nossa História' },
   { href: '#galeria', label: 'Galeria' },
-  { href: '#trilha', label: 'Trilha Sonora' },
-  { href: '#presentes', label: 'Presentes' },
-  { href: '#pix', label: 'Pix' }
+  { href: '#presentes', label: 'Presentes' }
 ]
 
 export function Header({ coupleNames }: HeaderProps) {
@@ -43,27 +43,27 @@ export function Header({ coupleNames }: HeaderProps) {
     <header
       className={`fixed inset-x-0 top-0 z-50 transition-all duration-500 ${
         isScrolled
-          ? 'border-b border-white/10 bg-[rgba(7,12,18,0.78)] shadow-[0_10px_40px_rgba(0,0,0,0.28)] backdrop-blur-xl'
-          : 'bg-transparent'
+          ? 'border-b border-[var(--color-border)] bg-white/86 shadow-[0_10px_36px_rgba(91,112,87,0.12)] backdrop-blur-xl'
+          : 'bg-white/68 backdrop-blur-md'
       }`}
     >
       <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4 lg:px-8">
         <a href="#inicio" className="group flex items-center gap-3">
-          <div className="flex h-11 w-11 items-center justify-center rounded-full border border-white/15 bg-white/5 text-sm tracking-[0.25em] text-[var(--color-accent)] transition group-hover:border-[var(--color-accent)]/50">
+          <div className="flex h-11 w-11 items-center justify-center rounded-full border border-[var(--color-border-strong)] bg-[var(--color-serenity)] text-sm tracking-[0.22em] text-[var(--color-olive)] transition group-hover:border-[var(--color-olive)]/50">
             {initials}
           </div>
           <div>
-            <p className="font-display text-xl text-white">{coupleNames}</p>
-            <p className="text-[0.7rem] uppercase tracking-[0.32em] text-white/55">21 . 11 . 2026</p>
+            <p className="font-display text-xl text-[var(--color-text-strong)]">{coupleNames}</p>
+            <p className="text-[0.7rem] uppercase tracking-[0.28em] text-[var(--color-text-muted)]">21 . 11 . 2026</p>
           </div>
         </a>
 
-        <nav className="hidden items-center gap-8 md:flex">
+        <nav className="hidden items-center gap-6 md:flex">
           {links.map((link) => (
             <a
               key={link.href}
               href={link.href}
-              className="text-sm text-white/78 transition hover:text-white"
+              className="text-sm font-medium text-[var(--color-text)] transition hover:text-[var(--color-olive)]"
             >
               {link.label}
             </a>
@@ -73,7 +73,7 @@ export function Header({ coupleNames }: HeaderProps) {
         <button
           type="button"
           onClick={() => setIsOpen((current) => !current)}
-          className="inline-flex h-11 w-11 items-center justify-center rounded-full border border-white/15 bg-white/5 text-white md:hidden"
+          className="inline-flex h-11 w-11 items-center justify-center rounded-full border border-[var(--color-border-strong)] bg-white/76 text-[var(--color-text-strong)] md:hidden"
           aria-label="Abrir menu"
           aria-expanded={isOpen}
         >
@@ -98,7 +98,7 @@ export function Header({ coupleNames }: HeaderProps) {
       </div>
 
       <div
-        className={`overflow-hidden border-t border-white/10 bg-[rgba(8,12,18,0.95)] backdrop-blur-xl transition-all duration-300 md:hidden ${
+        className={`overflow-hidden border-t border-[var(--color-border)] bg-white/95 backdrop-blur-xl transition-all duration-300 md:hidden ${
           isOpen ? 'max-h-96' : 'max-h-0 border-transparent'
         }`}
       >
@@ -108,7 +108,7 @@ export function Header({ coupleNames }: HeaderProps) {
               key={link.href}
               href={link.href}
               onClick={() => setIsOpen(false)}
-              className="border-b border-white/8 py-4 text-sm text-white/82 last:border-b-0"
+              className="border-b border-[var(--color-border)] py-4 text-sm font-medium text-[var(--color-text)] last:border-b-0"
             >
               {link.label}
             </a>

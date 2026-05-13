@@ -78,10 +78,10 @@ export function CountdownSection({ weddingDate }: CountdownSectionProps) {
   return (
     <section
       id="countdown"
-      className="relative border-y border-white/10 bg-[#0b0f14] px-6 py-24 text-white"
+      className="relative border-y border-[var(--color-border)] bg-[var(--color-panel)] px-6 py-24"
     >
       <div className="mx-auto max-w-6xl">
-        <p className="text-center text-xs uppercase tracking-[0.35em] text-white/60">
+        <p className="text-center text-xs uppercase tracking-[0.32em] text-[var(--color-olive-soft)]">
           Contagem regressiva
         </p>
 
@@ -95,12 +95,12 @@ export function CountdownSection({ weddingDate }: CountdownSectionProps) {
           {items.map((item) => (
             <div
               key={item.label}
-              className="rounded-[2rem] border border-white/10 bg-white/5 p-6 text-center shadow-[0_20px_80px_rgba(0,0,0,0.25)] backdrop-blur-sm"
+              className="rounded-[1.5rem] border border-[var(--color-border)] bg-white/82 p-6 text-center shadow-[0_18px_54px_rgba(91,112,87,0.1)]"
             >
-              <p className="font-display text-5xl text-white sm:text-6xl">
+              <p className="font-display text-5xl text-[var(--color-text-strong)] sm:text-6xl">
                 {item.value}
               </p>
-              <p className="mt-3 text-xs uppercase tracking-[0.35em] text-white/60">
+              <p className="mt-3 text-xs uppercase tracking-[0.28em] text-[var(--color-olive-soft)]">
                 {item.label}
               </p>
             </div>

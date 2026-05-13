@@ -100,7 +100,7 @@ export function GiftRegistrySection({ physicalGifts, pixGifts }: GiftRegistrySec
           align="center"
         />
 
-        <div className="mt-12 rounded-[2rem] border border-white/10 bg-white/[0.04] p-6 shadow-[0_25px_80px_rgba(0,0,0,0.14)]">
+        <div className="mt-12 rounded-[1.75rem] border border-[var(--color-border)] bg-white/78 p-6 shadow-[0_24px_80px_rgba(91,112,87,0.12)]">
           <div className="flex flex-col gap-4 lg:flex-row lg:items-center lg:justify-between">
             <label className="w-full lg:max-w-md">
               <span className="sr-only">Buscar presente</span>
@@ -109,7 +109,7 @@ export function GiftRegistrySection({ physicalGifts, pixGifts }: GiftRegistrySec
                 value={search}
                 onChange={(event) => setSearch(event.target.value)}
                 placeholder="Buscar presente, categoria ou experiência"
-                className="w-full rounded-full border border-white/10 bg-[var(--color-bg-soft)] px-5 py-3 text-sm text-white placeholder:text-white/45 outline-none ring-0 transition focus:border-[var(--color-accent)]"
+                className="w-full rounded-full border border-[var(--color-border)] bg-[var(--color-bg)] px-5 py-3 text-sm text-[var(--color-text-strong)] placeholder:text-[var(--color-text-muted)] outline-none ring-0 transition focus:border-[var(--color-olive)]"
               />
             </label>
 
@@ -119,10 +119,10 @@ export function GiftRegistrySection({ physicalGifts, pixGifts }: GiftRegistrySec
                   key={filter}
                   type="button"
                   onClick={() => setActiveFilter(filter)}
-                  className={`rounded-full px-4 py-2 text-sm transition ${
+                  className={`rounded-full px-4 py-2 text-sm font-medium transition ${
                     activeFilter === filter
-                      ? 'bg-[var(--color-accent)] text-[var(--color-bg)]'
-                      : 'border border-white/10 bg-white/[0.03] text-white/80 hover:bg-white/[0.07]'
+                      ? 'bg-[var(--color-olive)] text-white'
+                      : 'border border-[var(--color-border)] bg-white/70 text-[var(--color-text)] hover:bg-white'
                   }`}
                 >
                   {filter}
@@ -135,14 +135,14 @@ export function GiftRegistrySection({ physicalGifts, pixGifts }: GiftRegistrySec
             {filteredGifts.map((gift) => (
               <article
                 key={gift.id}
-                className="group rounded-[2rem] border border-white/10 bg-[linear-gradient(180deg,rgba(255,255,255,0.06),rgba(255,255,255,0.03))] p-6 transition hover:-translate-y-1 hover:border-white/18"
+                className="group rounded-[1.5rem] border border-[var(--color-border)] bg-[var(--color-bg)] p-6 transition hover:-translate-y-1 hover:border-[var(--color-border-strong)] hover:bg-white"
               >
                 <div className="flex items-start justify-between gap-4">
                   <div>
-                    <p className="text-xs uppercase tracking-[0.34em] text-[var(--color-accent)]">{gift.type}</p>
-                    <h3 className="mt-3 font-display text-3xl leading-tight text-white">{gift.title}</h3>
+                    <p className="text-xs uppercase tracking-[0.28em] text-[var(--color-olive-soft)]">{gift.type}</p>
+                    <h3 className="mt-3 font-display text-3xl leading-tight text-[var(--color-text-strong)]">{gift.title}</h3>
                   </div>
-                  <span className="rounded-full border border-white/12 bg-white/[0.05] px-3 py-1 text-[0.72rem] uppercase tracking-[0.2em] text-white/70">
+                  <span className="rounded-full border border-[var(--color-border)] bg-white/74 px-3 py-1 text-[0.72rem] uppercase tracking-[0.16em] text-[var(--color-text)]">
                     {gift.category}
                   </span>
                 </div>
@@ -150,11 +150,11 @@ export function GiftRegistrySection({ physicalGifts, pixGifts }: GiftRegistrySec
                 <p className="mt-4 min-h-24 leading-7 text-[var(--color-text)]">{gift.description}</p>
 
                 <div className="mt-5 flex flex-wrap items-center gap-3">
-                  <span className="rounded-full bg-[var(--color-olive-soft)]/12 px-3 py-1 text-xs font-medium text-[var(--color-olive-soft)]">
+                  <span className="rounded-full bg-[var(--color-serenity)] px-3 py-1 text-xs font-semibold text-[var(--color-olive)]">
                     {gift.chip}
                   </span>
                   {gift.priceLabel ? (
-                    <span className="rounded-full border border-[var(--color-accent)]/25 px-3 py-1 text-xs font-medium text-[var(--color-accent)]">
+                    <span className="rounded-full border border-[var(--color-border-strong)] bg-white/70 px-3 py-1 text-xs font-semibold text-[var(--color-olive)]">
                       {gift.priceLabel}
                     </span>
                   ) : null}
@@ -162,8 +162,8 @@ export function GiftRegistrySection({ physicalGifts, pixGifts }: GiftRegistrySec
 
                 <div className="mt-6">
                   <a
-                    href={gift.type === 'Pix' ? '#pix' : '#pix'}
-                    className="inline-flex rounded-full border border-white/14 px-5 py-3 text-sm font-medium text-white transition group-hover:border-[var(--color-accent)]/40 group-hover:bg-white/[0.05]"
+                    href="#pix"
+                    className="inline-flex rounded-full border border-[var(--color-border-strong)] bg-white/72 px-5 py-3 text-sm font-semibold text-[var(--color-text-strong)] transition group-hover:border-[var(--color-olive)]"
                   >
                     {gift.type === 'Pix' ? 'Presentear com Pix' : 'Ver chave Pix'}
                   </a>
