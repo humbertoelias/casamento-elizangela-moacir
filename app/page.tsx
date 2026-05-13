@@ -1,13 +1,11 @@
 import { CountdownSection } from '@/components/CountdownSection'
 import { Footer } from '@/components/Footer'
-import { GallerySection } from '@/components/GallerySection'
 import { GiftRegistrySection } from '@/components/GiftRegistrySection'
 import { Header } from '@/components/Header'
 import { HeroSection } from '@/components/HeroSection'
 import { OpenAtTop } from '@/components/OpenAtTop'
 import { PixSection } from '@/components/PixSection'
 import { RsvpSection } from '@/components/RsvpSection'
-import { StorySection } from '@/components/StorySection'
 import { VenueSection } from '@/components/VenueSection'
 import { weddingData } from '@/src/data/wedding'
 
@@ -30,12 +28,6 @@ export default function Home() {
         venueName={weddingData.weddingLocation}
         venueUrl={weddingData.weddingLocationUrl}
       />
-      <StorySection
-        intro={weddingData.storyIntro}
-        body={weddingData.storyBody}
-        milestones={weddingData.milestones}
-      />
-      <GallerySection images={weddingData.gallery} />
       <GiftRegistrySection
         physicalGifts={weddingData.physicalGifts}
         pixGifts={weddingData.pixGifts}

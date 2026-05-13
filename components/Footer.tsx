@@ -18,7 +18,6 @@ export function Footer({ coupleNames }: FooterProps) {
             <a href="#inicio" className="transition hover:text-[var(--color-olive)]">Início</a>
             <a href="#confirmacao" className="transition hover:text-[var(--color-olive)]">Confirmação</a>
             <a href="#local" className="transition hover:text-[var(--color-olive)]">Local</a>
-            <a href="#galeria" className="transition hover:text-[var(--color-olive)]">Galeria</a>
             <a href="#presentes" className="transition hover:text-[var(--color-olive)]">Presentes</a>
             <a href="#pix" className="transition hover:text-[var(--color-olive)]">Pix</a>
           </div>

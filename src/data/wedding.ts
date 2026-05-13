@@ -1,8 +1,3 @@
-export type StoryMilestone = {
-  title: string
-  text: string
-}
-
 export type GalleryImage = {
   src: string
   alt: string
@@ -46,38 +41,15 @@ export const weddingData = {
     ] satisfies AudioTrack[]
   },
   pixKey: 'fe9fc015-1f56-49fd-aacf-5b8709ff4d3a',
-  heroImage: '/galeria/foto7.jpg',
-  storyIntro:
-    'Entre encontros, conversas e momentos que foram ganhando cada vez mais sentido, ELIZÂNGELA e MOACIR construíram uma relação marcada por presença, leveza e carinho. Este site é uma forma de dividir um pouco dessa caminhada e celebrar com quem faz parte dela.',
-  storyBody:
-    'O casamento de ELIZÂNGELA e MOACIR representa mais do que uma cerimônia: representa uma escolha diária de cuidado, respeito, companheirismo e sonho em comum. Cada detalhe deste espaço foi pensado para refletir a beleza dessa nova fase e a alegria de compartilhar esse capítulo com pessoas queridas.',
-  milestones: [
-    {
-      title: 'Como tudo começou',
-      text: 'A história de ELIZÂNGELA e MOACIR começou de forma natural, com conversas que foram ficando mais longas, presença que foi se tornando importante e uma conexão que cresceu com leveza.'
-    },
-    {
-      title: 'Quando o amor ganhou força',
-      text: 'Com o tempo, os encontros se transformaram em rotina desejada, os sorrisos ficaram mais fáceis e a certeza de que havia algo especial entre os dois passou a fazer parte da vida.'
-    },
-    {
-      title: 'O sim do coração',
-      text: 'Entre planos, afeto e muitos sonhos compartilhados, chegou o momento de dar um passo ainda maior: dizer sim a uma vida construída a dois, com verdade e companheirismo.'
-    },
-    {
-      title: 'O que vem pela frente',
-      text: 'O sonho agora é continuar escrevendo essa história com amor, paz, respeito e alegria, transformando cada detalhe da vida em memória, acolhimento e presença.'
-    }
-  ] satisfies StoryMilestone[],
   gallery: [
-    { src: '/galeria/foto1.jpg', alt: 'ELIZÂNGELA e MOACIR sorrindo juntos em um dia especial.' },
-    { src: '/galeria/foto2.jpg', alt: 'Retrato leve e romântico de ELIZÂNGELA e MOACIR ao ar livre.' },
-    { src: '/galeria/foto3.jpg', alt: 'Momento descontraído do casal em clima de felicidade.' },
-    { src: '/galeria/foto4.jpg', alt: 'ELIZÂNGELA e MOACIR em um registro íntimo e elegante.' },
-    { src: '/galeria/foto5.jpg', alt: 'Casal aproveitando um instante de sol, piscina e carinho.' },
-    { src: '/galeria/foto6.jpg', alt: 'Foto do casal em cenário natural, com expressão de afeto.' },
-    { src: '/galeria/foto7.jpg', alt: 'Retrato noturno de ELIZÂNGELA e MOACIR com atmosfera sofisticada.' },
-    { src: '/galeria/foto8.jpg', alt: 'Casal celebrando a companhia um do outro em clima leve e especial.' }
+    { src: '/galeria/foto1.jpg', alt: 'Foto 1 de ELIZÂNGELA e MOACIR.' },
+    { src: '/galeria/foto2.jpg', alt: 'Foto 2 de ELIZÂNGELA e MOACIR.' },
+    { src: '/galeria/foto3.jpg', alt: 'Foto 3 de ELIZÂNGELA e MOACIR.' },
+    { src: '/galeria/foto4.jpg', alt: 'Foto 4 de ELIZÂNGELA e MOACIR.' },
+    { src: '/galeria/foto5.jpg', alt: 'Foto 5 de ELIZÂNGELA e MOACIR.' },
+    { src: '/galeria/foto6.jpg', alt: 'Foto 6 de ELIZÂNGELA e MOACIR.' },
+    { src: '/galeria/foto7.jpg', alt: 'Foto 7 de ELIZÂNGELA e MOACIR.' },
+    { src: '/galeria/foto8.jpg', alt: 'Foto 8 de ELIZÂNGELA e MOACIR.' }
   ] satisfies GalleryImage[],
   physicalGifts: [
     { id: 'fisico-1', name: 'Guarda-roupa casal', category: 'Quarto', status: 'Disponível', description: 'Um presente para começar o nosso lar com organização e conforto.' },

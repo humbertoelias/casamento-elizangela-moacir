@@ -10,8 +10,6 @@ const links = [
   { href: '#inicio', label: 'Início' },
   { href: '#confirmacao', label: 'Confirmação' },
   { href: '#local', label: 'Local' },
-  { href: '#historia', label: 'Nossa História' },
-  { href: '#galeria', label: 'Galeria' },
   { href: '#presentes', label: 'Presentes' }
 ]
 
