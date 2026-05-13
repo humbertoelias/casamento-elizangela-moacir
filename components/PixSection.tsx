@@ -11,16 +11,38 @@ type PixSectionProps = {
 
 export function PixSection({ pixKey }: PixSectionProps) {
   const [copied, setCopied] = useState(false)
+  const [copiedBankField, setCopiedBankField] = useState<string | null>(null)
 
-  async function handleCopy() {
+  async function copyToClipboard(value: string) {
+    await navigator.clipboard.writeText(value)
+  }
+
+  async function handleCopyPix() {
     try {
-      await navigator.clipboard.writeText(pixKey)
+      await copyToClipboard(pixKey)
       setCopied(true)
       window.setTimeout(() => setCopied(false), 2200)
     } catch {
       setCopied(false)
     }
   }
+
+  async function handleCopyBankField(label: string, value: string) {
+    try {
+      await copyToClipboard(value)
+      setCopiedBankField(label)
+      window.setTimeout(() => setCopiedBankField(null), 2200)
+    } catch {
+      setCopiedBankField(null)
+    }
+  }
+
+  const bankDetails = [
+    { label: 'Agência', value: '0001' },
+    { label: 'Conta', value: '1046068-8' },
+    { label: 'Banco', value: '0260' },
+    { label: 'Instituição', value: 'Nu Pagamentos S.A. - Instituição de Pagamento' }
+  ]
 
   return (
     <section id="pix" className="bg-[var(--color-bg)] py-24 sm:py-28">
@@ -41,7 +63,7 @@ export function PixSection({ pixKey }: PixSectionProps) {
             <div className="mt-6 flex flex-col gap-3 sm:flex-row sm:items-center">
               <button
                 type="button"
-                onClick={handleCopy}
+                onClick={handleCopyPix}
                 className="inline-flex justify-center rounded-full bg-[var(--color-olive)] px-6 py-3 text-sm font-semibold text-white transition hover:-translate-y-0.5"
               >
                 {copied ? 'Chave copiada' : 'Copiar chave Pix'}
@@ -51,6 +73,29 @@ export function PixSection({ pixKey }: PixSectionProps) {
                   ? 'A chave foi copiada. Agora é só abrir o app do seu banco e colar.'
                   : 'Depois de copiar, abra o aplicativo do seu banco e cole a chave na área de Pix.'}
               </p>
+            </div>
+
+            <div className="mt-8 rounded-[1.5rem] border border-[var(--color-border)] bg-[var(--color-bg)] p-5">
+              <p className="text-xs uppercase tracking-[0.28em] text-[var(--color-olive-soft)]">Dados bancários</p>
+              <div className="mt-5 divide-y divide-[var(--color-border)]">
+                {bankDetails.map((detail) => (
+                  <div key={detail.label} className="flex items-center justify-between gap-4 py-4 first:pt-0 last:pb-0">
+                    <div>
+                      <p className="text-sm text-[var(--color-text)]">{detail.label}</p>
+                      <p className="mt-1 break-words font-display text-2xl font-semibold leading-tight text-[var(--color-text-strong)]">
+                        {detail.value}
+                      </p>
+                    </div>
+                    <button
+                      type="button"
+                      onClick={() => handleCopyBankField(detail.label, detail.value)}
+                      className="shrink-0 rounded-full border border-[var(--color-border-strong)] bg-white/72 px-4 py-2 text-xs font-semibold text-[var(--color-text-strong)] transition hover:bg-white"
+                    >
+                      {copiedBankField === detail.label ? 'Copiado' : 'Copiar'}
+                    </button>
+                  </div>
+                ))}
+              </div>
             </div>
           </div>
 
