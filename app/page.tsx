@@ -4,7 +4,6 @@ import { GallerySection } from '@/components/GallerySection'
 import { GiftRegistrySection } from '@/components/GiftRegistrySection'
 import { Header } from '@/components/Header'
 import { HeroSection } from '@/components/HeroSection'
-import { MusicSection } from '@/components/MusicSection'
 import { PixSection } from '@/components/PixSection'
 import { RsvpSection } from '@/components/RsvpSection'
 import { StorySection } from '@/components/StorySection'
@@ -21,9 +20,7 @@ export default function Home() {
         weddingDateLabel={weddingData.weddingDateLabel}
         weddingLocation={weddingData.weddingLocation}
         galleryImages={weddingData.gallery}
-        songName={weddingData.soundtrack.songName}
-        artist={weddingData.soundtrack.artist}
-        youtubeUrl={weddingData.soundtrack.youtubeUrl}
+        tracks={weddingData.soundtrack.tracks}
       />
       <CountdownSection weddingDate={weddingData.weddingDate} />
       <RsvpSection />
@@ -37,12 +34,6 @@ export default function Home() {
         milestones={weddingData.milestones}
       />
       <GallerySection images={weddingData.gallery} />
-      <MusicSection
-        title={weddingData.soundtrack.title}
-        songName={weddingData.soundtrack.songName}
-        artist={weddingData.soundtrack.artist}
-        youtubeUrl={weddingData.soundtrack.youtubeUrl}
-      />
       <GiftRegistrySection
         physicalGifts={weddingData.physicalGifts}
         pixGifts={weddingData.pixGifts}

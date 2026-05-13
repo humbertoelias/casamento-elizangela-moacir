@@ -1,6 +1,7 @@
 import Image from 'next/image'
 
-import type { GalleryImage } from '@/src/data/wedding'
+import { MusicPlayer } from '@/components/MusicPlayer'
+import type { AudioTrack, GalleryImage } from '@/src/data/wedding'
 
 type HeroSectionProps = {
   coupleNames: string
@@ -8,29 +9,7 @@ type HeroSectionProps = {
   weddingDateLabel: string
   weddingLocation: string
   galleryImages: GalleryImage[]
-  songName: string
-  artist: string
-  youtubeUrl: string
-}
-
-function getEmbedUrl(youtubeUrl: string) {
-  const parsed = youtubeUrl.match(/(?:youtu\.be\/|v=)([A-Za-z0-9_-]+)/)
-  const videoId = parsed?.[1]
-
-  if (!videoId) {
-    return youtubeUrl
-  }
-
-  const params = new URLSearchParams({
-    autoplay: '1',
-    loop: '1',
-    playlist: videoId,
-    playsinline: '1',
-    rel: '0',
-    modestbranding: '1'
-  })
-
-  return `https://www.youtube.com/embed/${videoId}?${params.toString()}`
+  tracks: AudioTrack[]
 }
 
 export function HeroSection({
@@ -39,9 +18,7 @@ export function HeroSection({
   weddingDateLabel,
   weddingLocation,
   galleryImages,
-  songName,
-  artist,
-  youtubeUrl
+  tracks
 }: HeroSectionProps) {
   const carouselImages = [...galleryImages, ...galleryImages]
 
@@ -111,27 +88,8 @@ export function HeroSection({
             </div>
           </div>
 
-          <div id="trilha" className="overflow-hidden rounded-[1.75rem] border border-[var(--color-border)] bg-white/88 p-4 shadow-[0_22px_70px_rgba(91,112,87,0.16)] backdrop-blur">
-            <div className="mb-4 flex items-center gap-4">
-              <div className="grid h-14 w-14 shrink-0 place-items-center rounded-full bg-[var(--color-serenity)] text-[var(--color-olive)] shadow-inner">
-                <span className="text-xl">♪</span>
-              </div>
-              <div className="min-w-0">
-                <p className="text-xs uppercase tracking-[0.28em] text-[var(--color-olive-soft)]">Tocando agora</p>
-                <h2 className="truncate font-display text-2xl leading-tight text-[var(--color-text-strong)]">{songName}</h2>
-                <p className="text-sm text-[var(--color-text)]">{artist}</p>
-              </div>
-            </div>
-
-            <div className="overflow-hidden rounded-[1.2rem] border border-[var(--color-border)] bg-[var(--color-bg-soft)]">
-              <iframe
-                title={songName}
-                src={getEmbedUrl(youtubeUrl)}
-                className="h-28 w-full"
-                allow="autoplay; encrypted-media; picture-in-picture"
-                allowFullScreen
-              />
-            </div>
+          <div id="trilha" className="backdrop-blur">
+            <MusicPlayer tracks={tracks} autoPlay />
           </div>
         </div>
       </div>

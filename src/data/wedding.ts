@@ -23,6 +23,12 @@ export type PixGift = {
   description: string
 }
 
+export type AudioTrack = {
+  title: string
+  artist: string
+  src: string
+}
+
 export const weddingData = {
   coupleNames: 'ELIZÂNGELA & MOACIR',
   tagline: 'Uma história escrita com carinho, parceria e a beleza de escolher todos os dias caminhar lado a lado.',
@@ -32,9 +38,12 @@ export const weddingData = {
   weddingLocationUrl: 'https://www.facebook.com/sitosantana3?locale=pt_BR',
   soundtrack: {
     title: 'A trilha sonora da nossa história',
-    songName: 'Razão da Minha Vida / Sonho Bom',
-    artist: 'Belo',
-    youtubeUrl: 'https://youtu.be/A2HvRcZlHvg?si=041nZMW6vbuew4B7'
+    tracks: [
+      { title: 'Azul do Vinil', artist: 'Elizângela & Moacir', src: '/audio/azul-do-vinil.mp3' },
+      { title: 'Azul do Vinil (versão 2)', artist: 'Elizângela & Moacir', src: '/audio/azul-do-vinil-1.mp3' },
+      { title: 'Capítulo Doce Presença', artist: 'Elizângela & Moacir', src: '/audio/capitulo-doce-presenca.mp3' },
+      { title: 'Capítulo Doce Presença (versão 2)', artist: 'Elizângela & Moacir', src: '/audio/capitulo-doce-presenca-1.mp3' }
+    ] satisfies AudioTrack[]
   },
   pixKey: 'fe9fc015-1f56-49fd-aacf-5b8709ff4d3a',
   heroImage: '/galeria/foto7.jpg',
