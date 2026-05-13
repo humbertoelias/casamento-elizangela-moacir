@@ -39,10 +39,10 @@ export const weddingData = {
   soundtrack: {
     title: 'A trilha sonora da nossa história',
     tracks: [
-      { title: 'Azul do Vinil', artist: 'Elizângela & Moacir', src: '/audio/azul-do-vinil.mp3' },
-      { title: 'Azul do Vinil (versão 2)', artist: 'Elizângela & Moacir', src: '/audio/azul-do-vinil-1.mp3' },
-      { title: 'Capítulo Doce Presença', artist: 'Elizângela & Moacir', src: '/audio/capitulo-doce-presenca.mp3' },
-      { title: 'Capítulo Doce Presença (versão 2)', artist: 'Elizângela & Moacir', src: '/audio/capitulo-doce-presenca-1.mp3' }
+      { title: 'Nossa História', artist: 'Elizângela & Moacir', src: '/audio/azul-do-vinil.mp3' },
+      { title: 'Capítulos de Amor e Presença', artist: 'Elizângela & Moacir', src: '/audio/azul-do-vinil-1.mp3' },
+      { title: 'Dois Corações, Um Só Caminho', artist: 'Elizângela & Moacir', src: '/audio/capitulo-doce-presenca.mp3' },
+      { title: 'Presença, Leveza e Verdade', artist: 'Elizângela & Moacir', src: '/audio/capitulo-doce-presenca-1.mp3' }
     ] satisfies AudioTrack[]
   },
   pixKey: 'fe9fc015-1f56-49fd-aacf-5b8709ff4d3a',
