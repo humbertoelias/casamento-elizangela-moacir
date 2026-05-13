@@ -4,6 +4,7 @@ import { GallerySection } from '@/components/GallerySection'
 import { GiftRegistrySection } from '@/components/GiftRegistrySection'
 import { Header } from '@/components/Header'
 import { HeroSection } from '@/components/HeroSection'
+import { OpenAtTop } from '@/components/OpenAtTop'
 import { PixSection } from '@/components/PixSection'
 import { RsvpSection } from '@/components/RsvpSection'
 import { StorySection } from '@/components/StorySection'
@@ -13,6 +14,7 @@ import { weddingData } from '@/src/data/wedding'
 export default function Home() {
   return (
     <main className="overflow-x-hidden">
+      <OpenAtTop />
       <Header coupleNames={weddingData.coupleNames} />
       <HeroSection
         coupleNames={weddingData.coupleNames}
