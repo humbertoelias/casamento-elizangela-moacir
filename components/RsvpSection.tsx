@@ -27,7 +27,7 @@ export function RsvpSection() {
             />
 
             <div className="mt-8 rounded-[1.5rem] border border-[var(--color-border)] bg-white/80 p-5 shadow-[0_18px_54px_rgba(91,112,87,0.1)]">
-              <p className="text-xs uppercase tracking-[0.28em] text-[var(--color-olive-soft)]">Destino das respostas</p>
+              <p className="text-xs uppercase tracking-[0.28em] text-[var(--color-olive-soft)]">Envio por e-mail</p>
               <p className="mt-3 break-all text-base font-medium text-[var(--color-text-strong)]">
                 agapelel.realizacoes@gmail.com
               </p>
