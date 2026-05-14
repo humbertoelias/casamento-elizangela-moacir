@@ -28,7 +28,13 @@ export function Footer({ coupleNames }: FooterProps) {
             Parceiros
           </p>
 
-          <div className="mt-5 flex flex-col gap-5 sm:flex-row sm:items-center">
+          <a
+            href="https://www.instagram.com/agapelel?igsh=MWF3ZW5obTJpbzFmaQ%3D%3D"
+            target="_blank"
+            rel="noreferrer"
+            className="mt-5 flex flex-col gap-5 rounded-[1.25rem] transition hover:bg-[var(--color-bg)] sm:flex-row sm:items-center"
+            aria-label="Abrir Instagram da Ágape Cerimonial"
+          >
             <div className="relative h-36 w-28 shrink-0 overflow-hidden rounded-2xl border border-[var(--color-border)] bg-white">
               <Image
                 src="/parceiros/agape-logo.jpg"
@@ -43,14 +49,17 @@ export function Footer({ coupleNames }: FooterProps) {
               <p className="font-display text-3xl leading-tight text-[var(--color-text-strong)]">
                 Ágape Cerimonial
               </p>
+              <p className="mt-1 text-sm font-semibold text-[var(--color-olive)]">
+                Instagram da Ágape
+              </p>
               <p className="mt-2 text-sm font-medium text-[var(--color-text)]">
                 Contato:{' '}
-                <a href="tel:+5531992494408" className="text-[var(--color-olive)] transition hover:text-[var(--color-text-strong)]">
+                <span className="text-[var(--color-olive)]">
                   (31) 9 9249-4408
-                </a>
+                </span>
               </p>
             </div>
-          </div>
+          </a>
         </div>
       </div>
     </footer>

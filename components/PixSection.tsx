@@ -103,15 +103,13 @@ export function PixSection({ pixKey }: PixSectionProps) {
             <div className="relative mx-auto aspect-square max-w-[320px] overflow-hidden rounded-[1.2rem] border border-[var(--color-border)] bg-white">
               <Image
                 src="/pix-placeholder.svg"
-                alt="QR Code ilustrativo para área de Pix"
+                alt="QR Code da chave Pix do casal"
                 fill
-                className="object-cover"
+                className="object-contain p-4"
               />
             </div>
             <p className="mt-5 text-center text-sm leading-7 text-[var(--color-text)]">
-              Você também pode substituir este QR Code ilustrativo por um QR Code real depois. Basta trocar o arquivo
-              <span className="mx-1 rounded bg-white/70 px-2 py-1 font-mono text-xs text-[var(--color-text-strong)]">public/pix-placeholder.svg</span>
-              por uma imagem da sua chave Pix.
+              Aponte a câmera do celular para o QR Code ou copie a chave Pix para presentear com praticidade.
             </p>
           </div>
         </div>
