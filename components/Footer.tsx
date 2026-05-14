@@ -28,13 +28,7 @@ export function Footer({ coupleNames }: FooterProps) {
             Parceiros
           </p>
 
-          <a
-            href="https://www.instagram.com/agapelel?igsh=MWF3ZW5obTJpbzFmaQ%3D%3D"
-            target="_blank"
-            rel="noreferrer"
-            className="mt-5 flex flex-col gap-5 rounded-[1.25rem] transition hover:bg-[var(--color-bg)] sm:flex-row sm:items-center"
-            aria-label="Abrir Instagram da Ágape Cerimonial"
-          >
+          <div className="mt-5 flex flex-col gap-5 sm:flex-row sm:items-center">
             <div className="relative h-36 w-28 shrink-0 overflow-hidden rounded-2xl border border-[var(--color-border)] bg-white">
               <Image
                 src="/parceiros/agape-logo.jpg"
@@ -49,17 +43,29 @@ export function Footer({ coupleNames }: FooterProps) {
               <p className="font-display text-3xl leading-tight text-[var(--color-text-strong)]">
                 Ágape Cerimonial
               </p>
-              <p className="mt-1 text-sm font-semibold text-[var(--color-olive)]">
-                Instagram da Ágape
-              </p>
+              <a
+                href="https://www.instagram.com/agapelel?igsh=MWF3ZW5obTJpbzFmaQ%3D%3D"
+                target="_blank"
+                rel="noreferrer"
+                className="mt-3 inline-flex h-12 w-12 items-center justify-center rounded-full border border-[var(--color-border-strong)] bg-white shadow-[0_12px_28px_rgba(91,112,87,0.16)] transition hover:-translate-y-0.5 hover:shadow-[0_16px_34px_rgba(91,112,87,0.24)]"
+                aria-label="Abrir Instagram da Ágape Cerimonial"
+              >
+                <Image
+                  src="/social/instagram.svg"
+                  alt=""
+                  width={24}
+                  height={24}
+                  className="h-7 w-7"
+                />
+              </a>
               <p className="mt-2 text-sm font-medium text-[var(--color-text)]">
                 Contato:{' '}
-                <span className="text-[var(--color-olive)]">
+                <a href="tel:+5531992494408" className="text-[var(--color-olive)] transition hover:text-[var(--color-text-strong)]">
                   (31) 9 9249-4408
-                </span>
+                </a>
               </p>
             </div>
-          </a>
+          </div>
         </div>
       </div>
     </footer>

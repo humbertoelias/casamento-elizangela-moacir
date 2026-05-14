@@ -47,11 +47,11 @@ body::after {
 
 body::before {
   z-index: 0;
-  background-image: url("/decor/floral-frame.png");
-  background-position: center;
+  background-image: url("/decor/floral-bg-wide.png");
+  background-position: center top;
   background-repeat: no-repeat;
-  background-size: 100% 100%;
-  opacity: 0.44;
+  background-size: cover;
+  opacity: 0.6;
 }
 
 body::after {
@@ -59,16 +59,14 @@ body::after {
   background:
     linear-gradient(
       90deg,
-      rgba(250, 250, 243, 0.3) 0%,
-      rgba(255, 255, 250, 0.82) 14%,
-      rgba(255, 255, 250, 0.9) 50%,
-      rgba(255, 255, 250, 0.82) 86%,
-      rgba(250, 250, 243, 0.3) 100%
+      rgba(250, 250, 243, 0.1) 0%,
+      rgba(255, 255, 250, 0.64) 16%,
+      rgba(255, 255, 250, 0.86) 50%,
+      rgba(255, 255, 250, 0.64) 84%,
+      rgba(250, 250, 243, 0.1) 100%
     ),
-    radial-gradient(circle at 18% 70%, rgba(255, 255, 250, 0.86), transparent 22rem),
-    radial-gradient(circle at 82% 70%, rgba(255, 255, 250, 0.82), transparent 22rem),
-    radial-gradient(circle at 50% 20%, rgba(255, 255, 250, 0.76), transparent 28rem),
-    radial-gradient(circle at 50% 80%, rgba(255, 255, 250, 0.72), transparent 30rem);
+    radial-gradient(circle at 50% 18%, rgba(255, 255, 250, 0.72), transparent 30rem),
+    radial-gradient(circle at 50% 78%, rgba(255, 255, 250, 0.64), transparent 34rem);
 }
 
 body > * {
@@ -119,5 +117,25 @@ button {
     animation-duration: 0.01ms !important;
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
+  }
+}
+
+@media (max-width: 640px) {
+  body::before {
+    background-size: 100% 100%;
+    opacity: 0.42;
+  }
+
+  body::after {
+    background:
+      linear-gradient(
+        90deg,
+        rgba(255, 255, 250, 0.44) 0%,
+        rgba(255, 255, 250, 0.84) 20%,
+        rgba(255, 255, 250, 0.9) 50%,
+        rgba(255, 255, 250, 0.84) 80%,
+        rgba(255, 255, 250, 0.44) 100%
+      ),
+      radial-gradient(circle at 50% 24%, rgba(255, 255, 250, 0.74), transparent 18rem);
   }
 }

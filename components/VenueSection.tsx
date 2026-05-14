@@ -1,4 +1,5 @@
 import { SectionHeading } from '@/components/SectionHeading'
+import Image from 'next/image'
 
 type VenueSectionProps = {
   venueName: string
@@ -23,9 +24,16 @@ export function VenueSection({ venueName, venueUrl }: VenueSectionProps) {
               href={venueUrl}
               target="_blank"
               rel="noreferrer"
-              className="mt-6 inline-flex rounded-full bg-[var(--color-olive)] px-6 py-3 text-sm font-semibold text-white transition hover:-translate-y-0.5 hover:shadow-[0_14px_30px_rgba(91,112,87,0.22)]"
+              className="mt-6 inline-flex h-14 w-14 items-center justify-center rounded-full border border-[var(--color-border-strong)] bg-white shadow-[0_14px_30px_rgba(91,112,87,0.16)] transition hover:-translate-y-0.5 hover:shadow-[0_16px_36px_rgba(91,112,87,0.24)]"
+              aria-label="Abrir Facebook do Sítio Santana"
             >
-              Abrir página do Sítio Santana
+              <Image
+                src="/social/facebook.svg"
+                alt=""
+                width={24}
+                height={24}
+                className="h-7 w-7"
+              />
             </a>
           </div>
         </div>
