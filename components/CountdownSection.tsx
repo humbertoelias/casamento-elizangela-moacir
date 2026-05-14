@@ -95,9 +95,9 @@ export function CountdownSection({ weddingDate }: CountdownSectionProps) {
           {items.map((item) => (
             <div
               key={item.label}
-              className="rounded-[1.5rem] border border-[var(--color-border)] bg-white/82 p-6 text-center shadow-[0_18px_54px_rgba(91,112,87,0.1)]"
+              className="invite-paper rounded-[1rem] border border-[var(--color-border)] p-6 text-center"
             >
-              <p className="font-display text-5xl text-[var(--color-text-strong)] sm:text-6xl">
+              <p className="font-display text-5xl font-semibold text-[var(--color-olive)] sm:text-6xl">
                 {item.value}
               </p>
               <p className="mt-3 text-xs uppercase tracking-[0.28em] text-[var(--color-olive-soft)]">

@@ -47,7 +47,7 @@ export function PixSection({ pixKey }: PixSectionProps) {
   return (
     <section id="pix" className="bg-[var(--color-bg)] py-24 sm:py-28">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
-        <div className="grid gap-10 overflow-hidden rounded-[1.75rem] border border-[var(--color-border)] bg-white/82 p-8 shadow-[0_24px_80px_rgba(91,112,87,0.12)] lg:grid-cols-[1.1fr_0.9fr] lg:p-12">
+        <div className="invite-paper grid gap-10 overflow-hidden rounded-[1.25rem] border border-[var(--color-border)] p-8 lg:grid-cols-[1.1fr_0.9fr] lg:p-12">
           <div>
             <SectionHeading
               eyebrow="Pix"
@@ -55,7 +55,7 @@ export function PixSection({ pixKey }: PixSectionProps) {
               description="Se preferir, você pode presentear diretamente via Pix. Assim, ajudará a transformar sonhos, experiências e detalhes do nosso novo lar em memórias reais."
             />
 
-            <div className="mt-8 rounded-[1.5rem] border border-[var(--color-border)] bg-[var(--color-bg)] p-5">
+            <div className="mt-8 rounded-[1rem] border border-[var(--color-border)] bg-[var(--color-bg)] p-5">
               <p className="text-xs uppercase tracking-[0.28em] text-[var(--color-olive-soft)]">Chave Pix</p>
               <p className="mt-3 break-all font-mono text-sm leading-7 text-[var(--color-text-strong)] sm:text-base">{pixKey}</p>
             </div>
@@ -75,7 +75,7 @@ export function PixSection({ pixKey }: PixSectionProps) {
               </p>
             </div>
 
-            <div className="mt-8 rounded-[1.5rem] border border-[var(--color-border)] bg-[var(--color-bg)] p-5">
+            <div className="mt-8 rounded-[1rem] border border-[var(--color-border)] bg-[var(--color-bg)] p-5">
               <p className="text-xs uppercase tracking-[0.28em] text-[var(--color-olive-soft)]">Dados bancários</p>
               <div className="mt-5 divide-y divide-[var(--color-border)]">
                 {bankDetails.map((detail) => (
@@ -99,7 +99,7 @@ export function PixSection({ pixKey }: PixSectionProps) {
             </div>
           </div>
 
-          <div className="rounded-[1.5rem] border border-[var(--color-border)] bg-[var(--color-bg-soft)] p-5">
+          <div className="rounded-[1rem] border border-[var(--color-border)] bg-[var(--color-bg-soft)] p-5">
             <div className="relative mx-auto aspect-square max-w-[320px] overflow-hidden rounded-[1.2rem] border border-[var(--color-border)] bg-white">
               <Image
                 src="/pix-placeholder.svg"
