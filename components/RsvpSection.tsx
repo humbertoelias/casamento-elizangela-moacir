@@ -26,7 +26,7 @@ export function RsvpSection() {
               description="A confirmação será enviada por e-mail para a equipe da Ágape Cerimonial."
             />
 
-            <div className="invite-paper mt-8 rounded-[1rem] border border-[var(--color-border)] p-5">
+            <div className="mt-8 rounded-[1.5rem] border border-[var(--color-border)] bg-white/80 p-5 shadow-[0_18px_54px_rgba(91,112,87,0.1)]">
               <p className="text-xs uppercase tracking-[0.28em] text-[var(--color-olive-soft)]">Envio por e-mail</p>
               <p className="mt-3 break-all text-base font-medium text-[var(--color-text-strong)]">
                 agapelel.realizacoes@gmail.com
@@ -34,7 +34,7 @@ export function RsvpSection() {
             </div>
           </div>
 
-          <div className="invite-paper rounded-[1.25rem] border border-[var(--color-border)] p-6">
+          <div className="rounded-[1.75rem] border border-[var(--color-border)] bg-white/86 p-6 shadow-[0_24px_80px_rgba(91,112,87,0.14)]">
             {wasSent ? (
               <p className="mb-5 rounded-2xl border border-[var(--color-border)] bg-[var(--color-serenity)] px-4 py-3 text-sm font-medium text-[var(--color-text-strong)]">
                 Confirmação enviada. Obrigado pelo carinho!

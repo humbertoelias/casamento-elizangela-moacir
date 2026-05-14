@@ -1,20 +1,19 @@
 @import "tailwindcss";
 
 :root {
-  --color-bg: #f8f7ee;
-  --color-bg-soft: #eef3e9;
-  --color-panel: #f2f1e6;
-  --color-panel-2: #fbfaf2;
-  --color-paper: #fffef6;
-  --color-text: #3f4743;
-  --color-text-muted: #788176;
-  --color-text-strong: #304027;
-  --color-accent: #a9cfe4;
-  --color-serenity: #d9eaf2;
-  --color-olive: #4d6035;
-  --color-olive-soft: #6f7c5b;
-  --color-border: rgba(77, 96, 53, 0.18);
-  --color-border-strong: rgba(77, 96, 53, 0.34);
+  --color-bg: #f4faf9;
+  --color-bg-soft: #e7f1f2;
+  --color-panel: #eef6f1;
+  --color-panel-2: #f8fbf6;
+  --color-text: #41515a;
+  --color-text-muted: #78878b;
+  --color-text-strong: #1f3235;
+  --color-accent: #a9c8cf;
+  --color-serenity: #d8eaee;
+  --color-olive: #5f6f4f;
+  --color-olive-soft: #758561;
+  --color-border: rgba(95, 111, 79, 0.16);
+  --color-border-strong: rgba(95, 111, 79, 0.28);
 }
 
 * {
@@ -30,12 +29,9 @@ body {
 body {
   font-family: var(--font-body), sans-serif;
   background:
-    radial-gradient(circle at 16% 6%, rgba(169, 207, 228, 0.42), transparent 26%),
-    radial-gradient(circle at 86% 10%, rgba(77, 96, 53, 0.16), transparent 24%),
-    linear-gradient(90deg, rgba(77, 96, 53, 0.035) 1px, transparent 1px),
-    linear-gradient(180deg, rgba(77, 96, 53, 0.025) 1px, transparent 1px),
-    linear-gradient(180deg, #fbfaf2 0%, #f2f4ea 52%, #fbfaf2 100%);
-  background-size: auto, auto, 34px 34px, 34px 34px, auto;
+    radial-gradient(circle at 18% 4%, rgba(169, 200, 207, 0.52), transparent 30%),
+    radial-gradient(circle at 82% 14%, rgba(117, 133, 97, 0.2), transparent 26%),
+    linear-gradient(180deg, #f7fbfb 0%, #edf6f2 48%, #f8fbf6 100%);
   color: var(--color-text);
 }
 
@@ -72,76 +68,6 @@ button {
 :focus-visible {
   outline: 2px solid rgba(95, 111, 79, 0.75);
   outline-offset: 3px;
-}
-
-.invite-paper {
-  background:
-    radial-gradient(circle at 18% 18%, rgba(169, 207, 228, 0.14), transparent 28%),
-    radial-gradient(circle at 84% 72%, rgba(77, 96, 53, 0.08), transparent 32%),
-    linear-gradient(180deg, rgba(255, 254, 246, 0.96), rgba(248, 247, 238, 0.92));
-  box-shadow: 0 24px 70px rgba(77, 96, 53, 0.13);
-}
-
-.invite-floral-corner {
-  pointer-events: none;
-  position: absolute;
-  z-index: 0;
-  width: clamp(13rem, 25vw, 22rem);
-  height: clamp(9rem, 18vw, 16rem);
-  background-image: url('/convite/convite-referencia.jpg');
-  background-repeat: no-repeat;
-  background-size: clamp(32rem, 72vw, 54rem) auto;
-  opacity: 0.72;
-  mix-blend-mode: multiply;
-  filter: saturate(0.95);
-}
-
-.invite-floral-corner--top-left {
-  left: -2rem;
-  top: 4.75rem;
-  background-position: left top;
-}
-
-.invite-floral-corner--top-right {
-  right: -2rem;
-  top: 4.75rem;
-  background-position: right top;
-}
-
-.invite-floral-corner--bottom-left {
-  bottom: -1rem;
-  left: -2rem;
-  background-position: left bottom;
-}
-
-.invite-floral-corner--bottom-right {
-  bottom: -1rem;
-  right: -2rem;
-  background-position: right bottom;
-}
-
-.invite-divider {
-  display: flex;
-  align-items: center;
-  gap: 0.75rem;
-  color: var(--color-olive-soft);
-}
-
-.invite-divider::before,
-.invite-divider::after {
-  content: "";
-  height: 1px;
-  flex: 1;
-  background: linear-gradient(90deg, transparent, rgba(77, 96, 53, 0.35), transparent);
-}
-
-.invite-divider span {
-  display: inline-flex;
-  height: 0.45rem;
-  width: 0.45rem;
-  rotate: 45deg;
-  border: 1px solid currentColor;
-  background: var(--color-paper);
 }
 
 @media (prefers-reduced-motion: reduce) {

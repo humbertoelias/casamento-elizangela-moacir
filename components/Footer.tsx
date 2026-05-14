@@ -9,7 +9,7 @@ export function Footer({ coupleNames }: FooterProps) {
     <footer className="border-t border-[var(--color-border)] bg-[var(--color-bg-soft)] py-12">
       <div className="mx-auto grid max-w-7xl gap-10 px-6 text-sm text-[var(--color-text)] lg:grid-cols-[1fr_0.95fr] lg:px-8">
         <div>
-          <p className="font-display text-2xl font-semibold text-[var(--color-olive)]">{coupleNames}</p>
+          <p className="font-display text-2xl text-[var(--color-text-strong)]">{coupleNames}</p>
           <p className="mt-2 max-w-xl leading-7">
             Obrigado por fazer parte deste momento. Sua presença, seu carinho e sua lembrança tornam esse capítulo ainda mais especial.
           </p>
@@ -23,7 +23,7 @@ export function Footer({ coupleNames }: FooterProps) {
           </div>
         </div>
 
-        <div className="invite-paper rounded-[1.25rem] border border-[var(--color-border)] p-5">
+        <div className="rounded-[1.5rem] border border-[var(--color-border)] bg-white/76 p-5 shadow-[0_18px_54px_rgba(91,112,87,0.1)]">
           <p className="text-xs font-semibold uppercase tracking-[0.28em] text-[var(--color-olive-soft)]">
             Parceiros
           </p>

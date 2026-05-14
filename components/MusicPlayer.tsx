@@ -105,7 +105,7 @@ export function MusicPlayer({ tracks, autoPlay = false }: MusicPlayerProps) {
   }
 
   return (
-    <div className="invite-paper rounded-[1.25rem] border border-[var(--color-border)] p-4">
+    <div className="rounded-[1.5rem] border border-[var(--color-border)] bg-white/86 p-4 shadow-[0_18px_54px_rgba(91,112,87,0.12)]">
       <audio
         ref={audioRef}
         src={currentTrack.src}

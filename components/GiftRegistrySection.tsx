@@ -100,7 +100,7 @@ export function GiftRegistrySection({ physicalGifts, pixGifts }: GiftRegistrySec
           align="center"
         />
 
-        <div className="invite-paper mt-12 rounded-[1.25rem] border border-[var(--color-border)] p-6">
+        <div className="mt-12 rounded-[1.75rem] border border-[var(--color-border)] bg-white/78 p-6 shadow-[0_24px_80px_rgba(91,112,87,0.12)]">
           <div className="flex flex-col gap-4 lg:flex-row lg:items-center lg:justify-between">
             <label className="w-full lg:max-w-md">
               <span className="sr-only">Buscar presente</span>
@@ -135,7 +135,7 @@ export function GiftRegistrySection({ physicalGifts, pixGifts }: GiftRegistrySec
             {filteredGifts.map((gift) => (
               <article
                 key={gift.id}
-                className="group rounded-[1rem] border border-[var(--color-border)] bg-[var(--color-paper)]/70 p-6 transition hover:-translate-y-1 hover:border-[var(--color-border-strong)] hover:bg-white"
+                className="group rounded-[1.5rem] border border-[var(--color-border)] bg-[var(--color-bg)] p-6 transition hover:-translate-y-1 hover:border-[var(--color-border-strong)] hover:bg-white"
               >
                 <div className="flex items-start justify-between gap-4">
                   <div>

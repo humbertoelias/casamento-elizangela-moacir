@@ -41,17 +41,17 @@ export function Header({ coupleNames }: HeaderProps) {
     <header
       className={`fixed inset-x-0 top-0 z-50 transition-all duration-500 ${
         isScrolled
-          ? 'border-b border-[var(--color-border)] bg-[var(--color-paper)]/90 shadow-[0_10px_36px_rgba(77,96,53,0.12)] backdrop-blur-xl'
-          : 'bg-[var(--color-paper)]/72 backdrop-blur-md'
+          ? 'border-b border-[var(--color-border)] bg-white/86 shadow-[0_10px_36px_rgba(91,112,87,0.12)] backdrop-blur-xl'
+          : 'bg-white/68 backdrop-blur-md'
       }`}
     >
       <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4 lg:px-8">
         <a href="#inicio" className="group flex items-center gap-3">
-          <div className="flex h-11 w-11 items-center justify-center rounded-full border border-[var(--color-border-strong)] bg-[var(--color-serenity)] text-sm tracking-[0.22em] text-[var(--color-olive)] shadow-inner transition group-hover:border-[var(--color-olive)]/50">
+          <div className="flex h-11 w-11 items-center justify-center rounded-full border border-[var(--color-border-strong)] bg-[var(--color-serenity)] text-sm tracking-[0.22em] text-[var(--color-olive)] transition group-hover:border-[var(--color-olive)]/50">
             {initials}
           </div>
           <div>
-            <p className="font-display text-xl font-semibold text-[var(--color-olive)]">{coupleNames}</p>
+            <p className="font-display text-xl text-[var(--color-text-strong)]">{coupleNames}</p>
             <p className="text-[0.7rem] uppercase tracking-[0.28em] text-[var(--color-text-muted)]">21 . 11 . 2026</p>
           </div>
         </a>
@@ -96,7 +96,7 @@ export function Header({ coupleNames }: HeaderProps) {
       </div>
 
       <div
-        className={`overflow-hidden border-t border-[var(--color-border)] bg-[var(--color-paper)]/96 backdrop-blur-xl transition-all duration-300 md:hidden ${
+        className={`overflow-hidden border-t border-[var(--color-border)] bg-white/95 backdrop-blur-xl transition-all duration-300 md:hidden ${
           isOpen ? 'max-h-96' : 'max-h-0 border-transparent'
         }`}
       >

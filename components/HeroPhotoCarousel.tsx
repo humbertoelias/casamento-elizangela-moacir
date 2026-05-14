@@ -59,7 +59,7 @@ export function HeroPhotoCarousel({ images }: HeroPhotoCarouselProps) {
   }
 
   return (
-    <div className="invite-paper relative -mx-6 overflow-hidden border-y border-[var(--color-border)] lg:mx-0 lg:rounded-[1.25rem] lg:border">
+    <div className="relative -mx-6 overflow-hidden border-y border-[var(--color-border)] bg-white/70 shadow-[0_22px_80px_rgba(91,112,87,0.14)] lg:mx-0 lg:rounded-[2rem] lg:border">
       <div
         ref={carouselRef}
         className="flex snap-x snap-mandatory gap-4 overflow-x-auto scroll-smooth px-6 py-4 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
@@ -71,7 +71,7 @@ export function HeroPhotoCarousel({ images }: HeroPhotoCarouselProps) {
             ref={(element) => {
               slideRefs.current[index] = element
             }}
-            className="relative h-[clamp(14rem,34vh,22rem)] w-[72vw] shrink-0 snap-center overflow-hidden rounded-[1rem] border border-white/80 bg-[var(--color-bg-soft)] shadow-[0_12px_30px_rgba(77,96,53,0.1)] sm:w-[44vw] lg:h-[clamp(16rem,38vh,24rem)] lg:w-[28rem]"
+            className="relative h-[clamp(14rem,34vh,22rem)] w-[72vw] shrink-0 snap-center overflow-hidden rounded-[1.5rem] border border-white/70 bg-[var(--color-bg-soft)] sm:w-[44vw] lg:h-[clamp(16rem,38vh,24rem)] lg:w-[28rem]"
           >
             <Image
               src={image.src}
@@ -85,10 +85,10 @@ export function HeroPhotoCarousel({ images }: HeroPhotoCarouselProps) {
         ))}
       </div>
 
-      <div className="pointer-events-none absolute inset-y-0 left-0 w-20 bg-gradient-to-r from-[var(--color-paper)] to-transparent" />
-      <div className="pointer-events-none absolute inset-y-0 right-0 w-20 bg-gradient-to-l from-[var(--color-paper)] to-transparent" />
+      <div className="pointer-events-none absolute inset-y-0 left-0 w-20 bg-gradient-to-r from-[var(--color-bg)] to-transparent" />
+      <div className="pointer-events-none absolute inset-y-0 right-0 w-20 bg-gradient-to-l from-[var(--color-bg)] to-transparent" />
 
-      <div className="absolute bottom-5 left-1/2 flex -translate-x-1/2 items-center gap-3 rounded-full border border-[var(--color-border)] bg-[var(--color-paper)]/88 px-3 py-2 shadow-[0_12px_34px_rgba(77,96,53,0.12)] backdrop-blur">
+      <div className="absolute bottom-5 left-1/2 flex -translate-x-1/2 items-center gap-3 rounded-full border border-[var(--color-border)] bg-white/84 px-3 py-2 shadow-[0_12px_34px_rgba(31,50,53,0.12)] backdrop-blur">
         <button
           type="button"
           onClick={goToPrevious}
@@ -118,7 +118,7 @@ export function HeroPhotoCarousel({ images }: HeroPhotoCarouselProps) {
         </span>
       </div>
 
-      <div className="absolute right-5 top-5 hidden max-w-[45%] flex-wrap justify-end gap-2 rounded-full border border-[var(--color-border)] bg-[var(--color-paper)]/82 px-3 py-2 shadow-[0_12px_34px_rgba(77,96,53,0.1)] backdrop-blur sm:flex">
+      <div className="absolute right-5 top-5 hidden max-w-[45%] flex-wrap justify-end gap-2 rounded-full border border-[var(--color-border)] bg-white/78 px-3 py-2 shadow-[0_12px_34px_rgba(31,50,53,0.1)] backdrop-blur sm:flex">
         {images.map((image, index) => (
           <button
             key={image.src}

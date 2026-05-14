@@ -27,9 +27,9 @@ export type AudioTrack = {
 export const weddingData = {
   coupleNames: 'ELIZÂNGELA & MOACIR',
   tagline: 'Uma história escrita com carinho, parceria e a beleza de escolher todos os dias caminhar lado a lado.',
-  weddingDate: '2026-11-21T16:00:00-03:00',
-  weddingDateLabel: '21 de novembro de 2026, às 16h00',
-  weddingLocation: 'Sítio Santana (Próximo ao Pesque e Pague), Bambuí - MG',
+  weddingDate: '2026-11-21T16:30:00-03:00',
+  weddingDateLabel: '21 de novembro de 2026, às 16h30',
+  weddingLocation: 'Sítio Santana',
   weddingLocationUrl: 'https://www.facebook.com/sitosantana3?locale=pt_BR',
   soundtrack: {
     title: 'A trilha sonora da nossa história',

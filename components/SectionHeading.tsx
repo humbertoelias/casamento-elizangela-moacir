@@ -16,11 +16,11 @@ export function SectionHeading({
   return (
     <div className={`max-w-3xl ${alignment}`}>
       {eyebrow ? (
-        <p className="mb-3 text-xs font-semibold uppercase tracking-[0.35em] text-[var(--color-olive-soft)]">
+        <p className="mb-3 text-xs font-medium uppercase tracking-[0.35em] text-[var(--color-olive-soft)]">
           {eyebrow}
         </p>
       ) : null}
-      <h2 className="font-display text-4xl font-semibold leading-tight text-[var(--color-olive)] sm:text-5xl">
+      <h2 className="font-display text-4xl leading-tight text-[var(--color-text-strong)] sm:text-5xl">
         {title}
       </h2>
       {description ? (
