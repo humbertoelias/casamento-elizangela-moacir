@@ -1,19 +1,20 @@
 @import "tailwindcss";
 
 :root {
-  --color-bg: #f4faf9;
-  --color-bg-soft: #e7f1f2;
-  --color-panel: #eef6f1;
-  --color-panel-2: #f8fbf6;
-  --color-text: #41515a;
-  --color-text-muted: #78878b;
-  --color-text-strong: #1f3235;
-  --color-accent: #a9c8cf;
-  --color-serenity: #d8eaee;
-  --color-olive: #5f6f4f;
-  --color-olive-soft: #758561;
-  --color-border: rgba(95, 111, 79, 0.16);
-  --color-border-strong: rgba(95, 111, 79, 0.28);
+  --color-bg: rgba(250, 250, 243, 0.78);
+  --color-bg-soft: rgba(236, 244, 240, 0.78);
+  --color-panel: rgba(229, 240, 236, 0.76);
+  --color-panel-2: rgba(248, 250, 242, 0.82);
+  --color-text: #4c5b58;
+  --color-text-muted: #77837d;
+  --color-text-strong: #24312e;
+  --color-accent: #8fb9d5;
+  --color-serenity: #dceff7;
+  --color-olive: #55663f;
+  --color-olive-soft: #71805c;
+  --color-border: rgba(85, 102, 63, 0.18);
+  --color-border-strong: rgba(85, 102, 63, 0.34);
+  --shadow-botanical: 0 24px 80px rgba(59, 75, 54, 0.12);
 }
 
 * {
@@ -28,11 +29,51 @@ body {
 
 body {
   font-family: var(--font-body), sans-serif;
+  min-height: 100vh;
+  position: relative;
   background:
-    radial-gradient(circle at 18% 4%, rgba(169, 200, 207, 0.52), transparent 30%),
-    radial-gradient(circle at 82% 14%, rgba(117, 133, 97, 0.2), transparent 26%),
-    linear-gradient(180deg, #f7fbfb 0%, #edf6f2 48%, #f8fbf6 100%);
+    radial-gradient(circle at 50% 8%, rgba(220, 239, 247, 0.62), transparent 32rem),
+    linear-gradient(180deg, #fafaf4 0%, #f2f7f2 50%, #fbfaf2 100%);
   color: var(--color-text);
+}
+
+body::before,
+body::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+}
+
+body::before {
+  z-index: 0;
+  background-image: url("/decor/floral-frame.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  opacity: 0.44;
+}
+
+body::after {
+  z-index: 0;
+  background:
+    linear-gradient(
+      90deg,
+      rgba(250, 250, 243, 0.3) 0%,
+      rgba(255, 255, 250, 0.82) 14%,
+      rgba(255, 255, 250, 0.9) 50%,
+      rgba(255, 255, 250, 0.82) 86%,
+      rgba(250, 250, 243, 0.3) 100%
+    ),
+    radial-gradient(circle at 18% 70%, rgba(255, 255, 250, 0.86), transparent 22rem),
+    radial-gradient(circle at 82% 70%, rgba(255, 255, 250, 0.82), transparent 22rem),
+    radial-gradient(circle at 50% 20%, rgba(255, 255, 250, 0.76), transparent 28rem),
+    radial-gradient(circle at 50% 80%, rgba(255, 255, 250, 0.72), transparent 30rem);
+}
+
+body > * {
+  position: relative;
+  z-index: 1;
 }
 
 ::selection {

@@ -11,7 +11,7 @@ import { weddingData } from '@/src/data/wedding'
 
 export default function Home() {
   return (
-    <main className="overflow-x-hidden">
+    <main className="relative z-10 overflow-x-hidden">
       <OpenAtTop />
       <Header coupleNames={weddingData.coupleNames} />
       <HeroSection
